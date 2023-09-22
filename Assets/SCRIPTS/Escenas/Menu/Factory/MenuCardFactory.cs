@@ -18,6 +18,8 @@ public class CardFactory : MonoBehaviour
 public class MenuCardFactory : CardFactory
 {
     #region EXPOSED_FIELDS
+    [SerializeField] private ScreenController screenController;
+
     [SerializeField] private Camera mainCamera = null;
     [SerializeField] private Transform holder = null;
     [SerializeField] private Vector2[] initialCardsUIPosiution = null;
@@ -61,14 +63,6 @@ public class MenuCardFactory : CardFactory
     #endregion
 
     #region PRIVATE_METHODS
-    private bool CheckAABB(Vector2 firstPosition, Vector2 firstWH, Vector2 secondPosition)
-    {
-        return secondPosition.x > firstPosition.x &&
-            secondPosition.x < firstPosition.x + firstWH.x &&
-            secondPosition.y < firstPosition.y &&
-            secondPosition.y > firstPosition.y + firstWH.y;
-    }
-
     private void InitialInteraction()
     {
         if (!selected)
@@ -138,15 +132,19 @@ public class MenuCardFactory : CardFactory
                     else
                     {
                         selectedCard.SetPosition(dissapearPosition);
+
+                        ScreenModel screenModel = new ScreenModel(selectedCard.MenuConfig);
+                        screenController.Init(screenModel);
+                        screenController.ToggleMenu(true);
+
                         selectedCard = null;
                         selected = false;
-                        //TOGGLE SCREEN
                     }
                 }
             }
         }
     }
 
-    
+
     #endregion
 }

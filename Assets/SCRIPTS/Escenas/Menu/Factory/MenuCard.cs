@@ -27,6 +27,7 @@ public class MenuCard : Card
 {
     #region EXPOSED_FIELDS
     [SerializeField] private Vector3 selectedScale = Vector3.one;
+    [SerializeField] private MenuConfig menuConfig = null;
     #endregion
 
     #region PRIVATE_FIELDS
@@ -47,13 +48,15 @@ public class MenuCard : Card
     public Vector2 SpawnPosition { get { return spawnPosition; } }
     public Vector3 InitialScale { get { return initialScale; } }
     public Vector3 SelectedScale { get { return selectedScale; } }
+
+    public MenuConfig MenuConfig { get => menuConfig; }
     #endregion
 
     #region UNITY_CALLLS
     private void Update()
     {
         rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, destPosition, lerperSpeed);
-        rectTransform.sizeDelta = Vector3.Lerp(rectTransform.sizeDelta, destScale, lerperSpeed);
+        //rectTransform.sizeDelta = Vector3.Lerp(rectTransform.sizeDelta, destScale, lerperSpeed);
     }
     #endregion
 
@@ -66,7 +69,6 @@ public class MenuCard : Card
         image.color = Color.white;
         rectTransform.anchoredPosition = spawnPosition;
         lerperSpeed = 0.085f;
-        initialScale = rectTransform.sizeDelta;
     }
 
     public void SetLerpSpeed(float speed)
@@ -81,7 +83,7 @@ public class MenuCard : Card
 
     public override void SetScale(Vector3 scale)
     {
-        destScale = scale;
+        //destScale = scale;
     }
     #endregion
 }

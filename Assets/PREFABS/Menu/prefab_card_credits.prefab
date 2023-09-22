@@ -105,4 +105,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: credits
   sprite: {fileID: 21300000, guid: 64a732f5814dfd144a92d82348e07fdd, type: 3}
-  selectedScale: {x: 1.2, y: 1.2, z: 1.2}
+  selectedScale: {x: 1, y: 1, z: 1}
+  menuConfig: {fileID: 11400000, guid: 1e48161108b14574ab433769d9d4236a, type: 2}

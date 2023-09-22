@@ -106,3 +106,4 @@ MonoBehaviour:
   id: menu
   sprite: {fileID: 21300000, guid: ad2fef65d7b5414429f459d22edd2560, type: 3}
   selectedScale: {x: 1, y: 1, z: 1}
+  menuConfig: {fileID: 11400000, guid: 8ae5a45c3e041804bb4768c02d701cee, type: 2}

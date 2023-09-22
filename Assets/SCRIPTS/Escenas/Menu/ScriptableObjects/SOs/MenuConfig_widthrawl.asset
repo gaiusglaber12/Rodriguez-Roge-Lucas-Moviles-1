@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9d089447f60c549884fb54bc6a8b61, type: 3}
+  m_Name: MenuConfig_widthrawl
+  m_EditorClassIdentifier: 
+  id: 
+  buttonModels:
+  - id: 20
+    btnName: 20
+    btnPosition: 0
+    menuConfig: {fileID: 0}
+  - id: 100
+    btnName: 100
+    btnPosition: 1
+    menuConfig: {fileID: 0}
+  - id: 50
+    btnName: 50
+    btnPosition: 4
+    menuConfig: {fileID: 0}
+  - id: 200
+    btnName: 200
+    btnPosition: 5
+    menuConfig: {fileID: 0}
+  - id: 500
+    btnName: 500
+    btnPosition: 2
+    menuConfig: {fileID: 0}
+  - id: 
+    btnName: 
+    btnPosition: 3
+    menuConfig: {fileID: 0}
+  - id: back
+    btnName: BACK
+    btnPosition: 3
+    menuConfig: {fileID: 11400000, guid: 8ae5a45c3e041804bb4768c02d701cee, type: 2}
+  - id: 1000
+    btnName: 1000
+    btnPosition: 6
+    menuConfig: {fileID: 0}
+  - id: 1500
+    btnName: 1500
+    btnPosition: 7
+    menuConfig: {fileID: 0}
