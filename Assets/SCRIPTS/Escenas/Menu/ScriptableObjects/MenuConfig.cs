@@ -4,5 +4,6 @@ using UnityEngine;
 public class MenuConfig : ScriptableObject
 {
     public string id = string.Empty;
+    public string mainText = string.Empty;
     public ButtonModel[] buttonModels = null;
 }

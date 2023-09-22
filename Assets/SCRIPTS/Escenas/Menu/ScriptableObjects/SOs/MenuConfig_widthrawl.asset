@@ -13,40 +13,50 @@ MonoBehaviour:
   m_Name: MenuConfig_widthrawl
   m_EditorClassIdentifier: 
   id: 
+  mainText: 
   buttonModels:
   - id: 20
     btnName: 20
     btnPosition: 0
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 100
     btnName: 100
     btnPosition: 1
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 50
     btnName: 50
     btnPosition: 4
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 200
     btnName: 200
     btnPosition: 5
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 500
     btnName: 500
     btnPosition: 2
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 
     btnName: 
     btnPosition: 3
     menuConfig: {fileID: 0}
+    btnColor: {r: 1, g: 0, b: 0, a: 1}
   - id: back
     btnName: BACK
     btnPosition: 3
     menuConfig: {fileID: 11400000, guid: 8ae5a45c3e041804bb4768c02d701cee, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 1000
     btnName: 1000
     btnPosition: 6
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: 1500
     btnName: 1500
     btnPosition: 7
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: 9a69ea0d854e1c2469c766ac682e5b1c, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}

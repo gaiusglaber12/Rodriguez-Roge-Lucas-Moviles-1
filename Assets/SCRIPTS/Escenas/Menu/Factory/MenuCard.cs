@@ -68,7 +68,7 @@ public class MenuCard : Card
         image.sprite = sprite;
         image.color = Color.white;
         rectTransform.anchoredPosition = spawnPosition;
-        lerperSpeed = 0.085f;
+        lerperSpeed = 0.3f;
     }
 
     public void SetLerpSpeed(float speed)

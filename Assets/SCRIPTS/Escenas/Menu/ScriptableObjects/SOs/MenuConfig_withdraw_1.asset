@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c9d089447f60c549884fb54bc6a8b61, type: 3}
-  m_Name: MenuConfig_credits_menu
+  m_Name: MenuConfig_withdraw_1
   m_EditorClassIdentifier: 
   id: 
-  mainText: 
+  mainText: 'Would you like to donate 9.99$ to the '
   buttonModels:
-  - id: credits
-    btnName: CREDITS
+  - id: no
+    btnName: NO
     btnPosition: 0
     menuConfig: {fileID: 11400000, guid: 6ca50871c95fbf14eaf9fffb1392c7a5, type: 2}
     btnColor: {r: 0, g: 0, b: 0, a: 1}
-  - id: exit
-    btnName: EXIT
+  - id: yes
+    btnName: YES
     btnPosition: 3
     menuConfig: {fileID: 0}
     btnColor: {r: 0, g: 0, b: 0, a: 1}

@@ -13,20 +13,25 @@ MonoBehaviour:
   m_Name: MenuConfig_mainmenu
   m_EditorClassIdentifier: 
   id: 
+  mainText: 
   buttonModels:
   - id: single
     btnName: SINGLE PLAYER
     btnPosition: 0
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: e219b4bb1db9c2e478e9df26d77234aa, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: coop
     btnName: COOP MULTIPLAYER
     btnPosition: 4
-    menuConfig: {fileID: 0}
+    menuConfig: {fileID: 11400000, guid: de2ab0a9cdd04754e8d20aff78743fae, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: exit
     btnName: EXIT
     btnPosition: 3
     menuConfig: {fileID: 0}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: withdraw
     btnName: QUICK WITHDRAW
     btnPosition: 5
     menuConfig: {fileID: 11400000, guid: 05879b474c2132845ba87397ce564e28, type: 2}
+    btnColor: {r: 0, g: 0, b: 0, a: 1}

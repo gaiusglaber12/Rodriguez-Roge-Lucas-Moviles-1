@@ -26,6 +26,7 @@ public class ButtonView : MonoBehaviour
     {
         btn.onClick.AddListener(() => onPressed?.Invoke(btnModel));
         tmp.text = btnModel == null ? string.Empty : btnModel.btnName;
+        tmp.color = btnModel == null ? Color.black : btnModel.btnColor;
     }
 
     public void RemoveListeners()

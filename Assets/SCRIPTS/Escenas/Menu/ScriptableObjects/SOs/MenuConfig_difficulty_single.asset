@@ -10,33 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c9d089447f60c549884fb54bc6a8b61, type: 3}
-  m_Name: MenuConfig_credits
+  m_Name: MenuConfig_difficulty_single
   m_EditorClassIdentifier: 
   id: 
   mainText: 
   buttonModels:
-  - id: Developer
-    btnName: DEVELOPER
+  - id: easy
+    btnName: EASY
     btnPosition: 0
     menuConfig: {fileID: 0}
-    btnColor: {r: 0, g: 0, b: 0, a: 1}
-  - id: teacher
-    btnName: TEACHER
-    btnPosition: 1
-    menuConfig: {fileID: 0}
-    btnColor: {r: 0, g: 0, b: 0, a: 1}
-  - id: io
-    btnName: LUCAS RODRIGUEZ ROGE
+    btnColor: {r: 0.42288527, g: 0.9433962, b: 0.4138483, a: 1}
+  - id: medium
+    btnName: MEDIUM
     btnPosition: 4
     menuConfig: {fileID: 0}
-    btnColor: {r: 0, g: 0, b: 0, a: 1}
-  - id: rodri
-    btnName: RODRIGO NOSE EL APELLIDO
-    btnPosition: 5
+    btnColor: {r: 0.9433962, g: 0.934214, b: 0.27144888, a: 1}
+  - id: hard
+    btnName: HARD
+    btnPosition: 1
     menuConfig: {fileID: 0}
-    btnColor: {r: 0, g: 0, b: 0, a: 1}
+    btnColor: {r: 0.9811321, g: 0.28230685, b: 0.28230685, a: 1}
   - id: back
     btnName: BACK
     btnPosition: 3
-    menuConfig: {fileID: 11400000, guid: 1e48161108b14574ab433769d9d4236a, type: 2}
+    menuConfig: {fileID: 11400000, guid: 8ae5a45c3e041804bb4768c02d701cee, type: 2}
     btnColor: {r: 0, g: 0, b: 0, a: 1}

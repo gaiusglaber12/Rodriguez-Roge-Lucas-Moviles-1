@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MenuView : MonoBehaviour
 {
     #region EXPOSED_FIELDS
+    [SerializeField] private TMPro.TMP_Text titleTxt = null;
     [SerializeField] private ButtonView[] buttonViews = null;
     #endregion
 
@@ -22,6 +22,10 @@ public class MenuView : MonoBehaviour
                 }
             }
         }
+        if (menuConfig.mainText != string.Empty)
+        {
+            titleTxt.text = menuConfig.mainText;
+        }
     }
 
     public void ClearMenu()
@@ -32,6 +36,7 @@ public class MenuView : MonoBehaviour
             view.RemoveListeners();
             view.ToggleImg(false);
         }
+        titleTxt.text = string.Empty;
     }
     #endregion
 }
