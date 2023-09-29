@@ -21,6 +21,10 @@ public class MenuController : MonoBehaviour
     [SerializeField] private MenuView menuView = null;
     #endregion
 
+    #region CONSTANT_FIELDS
+    private const string gameplaySceneName = "conduccion9";
+    #endregion
+
     #region PUBLIC_METHODS
     public void SetMenu(MenuConfig menuConfig, Action<string> onBackPreseed)
     {
@@ -40,11 +44,63 @@ public class MenuController : MonoBehaviour
             }
             else
             {
+                Action onChangeScene = null;
                 switch (buttonModel.id)
                 {
-                    case "single":
+                    case "easy":
+                        onChangeScene =
+                            () =>
+                            {
+                                GameDataSingleton.Instance.dificulty = GameDataSingleton.DIFICULTY.EASY;
+                                GameDataSingleton.Instance.mode = GameDataSingleton.MODE.SINGLE;
+                                GameDataSingleton.Instance.ChangeScene(gameplaySceneName);
+                            };
                         break;
-                    case "coop":
+                    case "medium":
+                        onChangeScene =
+                            () =>
+                            {
+                                GameDataSingleton.Instance.dificulty = GameDataSingleton.DIFICULTY.NORMAL;
+                                GameDataSingleton.Instance.mode = GameDataSingleton.MODE.SINGLE;
+                                GameDataSingleton.Instance.ChangeScene(gameplaySceneName);
+                            };
+                        break;
+                    case "hard":
+                        onChangeScene =
+                            () =>
+                            {
+                                GameDataSingleton.Instance.dificulty = GameDataSingleton.DIFICULTY.HARD;
+                                GameDataSingleton.Instance.mode = GameDataSingleton.MODE.SINGLE;
+                                GameDataSingleton.Instance.ChangeScene(gameplaySceneName);
+                            };
+                        break;
+                    case "easy_mult":
+                        onChangeScene =
+                            () =>
+                            {
+                                GameDataSingleton.Instance.dificulty = GameDataSingleton.DIFICULTY.EASY;
+                                GameDataSingleton.Instance.mode = GameDataSingleton.MODE.MULTIPLAYER;
+                                GameDataSingleton.Instance.ChangeScene(gameplaySceneName);
+                            };
+                        break;
+                    case "medium_mult":
+                        onChangeScene =
+                            () =>
+                            {
+                                GameDataSingleton.Instance.dificulty = GameDataSingleton.DIFICULTY.NORMAL;
+                                GameDataSingleton.Instance.mode = GameDataSingleton.MODE.MULTIPLAYER;
+                                GameDataSingleton.Instance.ChangeScene(gameplaySceneName);
+                            };
+                        break;
+                    case "hard_mult":
+                        onChangeScene =
+                            () =>
+                            {
+                                GameDataSingleton.Instance.dificulty = GameDataSingleton.DIFICULTY.HARD;
+                                GameDataSingleton.Instance.mode = GameDataSingleton.MODE.MULTIPLAYER;
+                                GameDataSingleton.Instance.ChangeScene(gameplaySceneName);
+                            };
+                        
                         break;
                     case "back":
                         break;
@@ -59,6 +115,10 @@ public class MenuController : MonoBehaviour
                         break;
                     default:
                         break;
+                }
+                if (onChangeScene != null)
+                {
+                    buttonModel.onPressed = (buttonModel) => onChangeScene.Invoke();
                 }
             }
         }

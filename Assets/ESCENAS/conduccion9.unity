@@ -34033,10 +34033,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
-    width: 0.5
-    height: 1
+    width: 1
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -34077,8 +34077,8 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 0.5
+    y: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -34119,10 +34119,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
-    width: 0.5
-    height: 1
+    width: 1
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -34206,8 +34206,8 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 0.5
+    y: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -77384,6 +77384,27 @@ MonoBehaviour:
   - {fileID: 3124}
   - {fileID: 3102}
   - {fileID: 213}
+  player1Cameras:
+  - {fileID: 6356}
+  - {fileID: 6358}
+  - {fileID: 6359}
+  player2Cameras:
+  - {fileID: 6357}
+  - {fileID: 6360}
+  - {fileID: 6355}
+  player2Scenes:
+  - {fileID: 1643806369}
+  - {fileID: 3092}
+  - {fileID: 3121}
+  - {fileID: 2683}
+  taxiHolder: {fileID: 177}
+  boxesHolder:
+  - {fileID: 2025}
+  - {fileID: 2082}
+  conesHolder:
+  - {fileID: 1681}
+  - {fileID: 1672}
+  - {fileID: 2077}
 --- !u!1001 &13083
 PrefabInstance:
   m_ObjectHideFlags: 0
