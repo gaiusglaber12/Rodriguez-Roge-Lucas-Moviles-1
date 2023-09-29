@@ -11,10 +11,22 @@ public class ScreenController : MonoBehaviour
     [SerializeField] private MenuCardFactory menuCardFactory = null;
     [SerializeField] private ScreenView screenView = null;
     [SerializeField] private MenuController menuController = null;
+    [SerializeField] private MenuConfig creditsMenuConfig = null;
     #endregion
 
     #region PRIVATE_FIELDS
     private MenuConfig selectedMenuConfig = null;
+    #endregion
+
+    #region UNITY_CALLS
+    private void Start()
+    {
+        if (GameDataSingleton.Instance!= null && GameDataSingleton.Instance.startOnCredits)
+        {
+            Init(new ScreenModel(creditsMenuConfig));
+            ToggleMenu(true);
+        }
+    }
     #endregion
 
     #region PUBLIC_METHODS

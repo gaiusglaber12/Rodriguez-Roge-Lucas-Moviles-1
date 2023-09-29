@@ -61,6 +61,7 @@ public class MngPts : MonoBehaviour
 		if(TiempEspReiniciar <= 0 )
 		{
 			SceneManager.LoadScene(0);
+			GameDataSingleton.Instance.startOnCredits = true;
 		}
 		
 		

@@ -1142,6 +1142,7 @@ MonoBehaviour:
   menuCardFactory: {fileID: 1723262558}
   screenView: {fileID: 227560796}
   menuController: {fileID: 285087670}
+  creditsMenuConfig: {fileID: 11400000, guid: 6ca50871c95fbf14eaf9fffb1392c7a5, type: 2}
 --- !u!224 &1357053978 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7504253278912491242, guid: a6cb73c9691112f49987d5282bc21fec,
@@ -2205,6 +2206,7 @@ MonoBehaviour:
   lerperSpeed: 0.1
   dificulty: 0
   mode: 0
+  startOnCredits: 0
 --- !u!223 &1826082844
 Canvas:
   m_ObjectHideFlags: 0

@@ -37,7 +37,16 @@ public class MenuCardFactory : CardFactory
     #region UNITY_CALLS
     private void Awake()
     {
-        Configure();
+        cards = new List<Card>();
+        if (GameDataSingleton.Instance == null || !GameDataSingleton.Instance.startOnCredits)
+        {
+            Configure();
+        }
+        else
+        {
+            selectedCard = null;
+            selected = false;
+        }
     }
 
     private void Update()
@@ -50,7 +59,6 @@ public class MenuCardFactory : CardFactory
     #region PUBLIC_METHODS
     public void Configure()
     {
-        cards = new List<Card>();
         for (int i = 0; i < initialCardsUIPosiution.Length; i++)
         {
             GameObject go = Instantiate(cardsPrefabs[i], Vector3.zero, Quaternion.identity, holder);

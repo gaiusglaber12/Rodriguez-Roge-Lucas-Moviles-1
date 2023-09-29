@@ -30,6 +30,7 @@ public class GameDataSingleton : MonoBehaviour
     public static GameDataSingleton Instance;
     public DIFICULTY dificulty = DIFICULTY.EASY;
     public MODE mode = MODE.MULTIPLAYER;
+    public bool startOnCredits = false;
     #endregion
 
     #region PRIVATE_FIELDS

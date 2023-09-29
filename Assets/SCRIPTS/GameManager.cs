@@ -180,8 +180,7 @@ public class GameManager : MonoBehaviour
     void EmpezarCarrera()
     {
         Player1.GetComponent<Frenado>().RestaurarVel();
-        if (GameDataSingleton.Instance.mode == GameDataSingleton.MODE.MULTIPLAYER)
-            Player1.GetComponent<ControlDireccion>().Habilitado = true;
+        Player1.GetComponent<ControlDireccion>().Habilitado = true;
 
         Player2.GetComponent<Frenado>().RestaurarVel();
         if (GameDataSingleton.Instance.mode == GameDataSingleton.MODE.MULTIPLAYER)

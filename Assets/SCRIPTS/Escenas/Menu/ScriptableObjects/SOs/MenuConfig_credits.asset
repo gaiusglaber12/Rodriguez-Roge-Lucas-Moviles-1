@@ -31,7 +31,7 @@ MonoBehaviour:
     menuConfig: {fileID: 0}
     btnColor: {r: 0, g: 0, b: 0, a: 1}
   - id: rodri
-    btnName: RODRIGO NOSE EL APELLIDO
+    btnName: RODRIGO MARTIN CORRAL FERNANDEZ
     btnPosition: 5
     menuConfig: {fileID: 0}
     btnColor: {r: 0, g: 0, b: 0, a: 1}
