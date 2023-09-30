@@ -11,7 +11,7 @@ public class ControlDireccion : MonoBehaviour
 	CarController carController;
 		
 	//---------------------------------------------------------//
-	
+	public FixedJoystick joystick;
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,38 +21,10 @@ public class ControlDireccion : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		switch(InputAct)
-		{
-            case TipoInput.AWSD:
-                if (Habilitado) {
-                    if (Input.GetKey(KeyCode.A)) {
-						Giro = -1;
-                    }
-                    else if (Input.GetKey(KeyCode.D)) {
-						Giro = 1;
-                    }
-                    else {
-						Giro = 0;
-					}
-                }
-                break;
-            case TipoInput.Arrows:
-                if (Habilitado) {
-                    if (Input.GetKey(KeyCode.LeftArrow)) {
-						Giro = -1;
-					}
-                    else if (Input.GetKey(KeyCode.RightArrow)) {
-						Giro = 1;
-					}
-                    else {
-						Giro = 0;
-					}
-                }
-                break;
-        }
+		carController.SetGiro(joystick.Horizontal);
+		carController.SetAcel(joystick.Vertical<=0.1f ? 0.1f : joystick.Vertical);
 
-		carController.SetGiro(Giro);
-	}
+    }
 
 	public float GetGiro()
 	{

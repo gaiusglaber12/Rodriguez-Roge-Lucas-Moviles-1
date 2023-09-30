@@ -68,7 +68,6 @@ public class Frenado : MonoBehaviour
 	public void RestaurarVel()
 	{
 		GetComponent<ControlDireccion>().enabled = true;
-		gameObject.GetComponent<CarController>().SetAcel(1f);
         Frenando = false;
 		Tempo = 0;
 		Contador = 0;

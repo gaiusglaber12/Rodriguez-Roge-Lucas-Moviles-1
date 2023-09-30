@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public Player Player1;
     public Player Player2;
 
+    public Joystick player1Joystick;
+    public Joystick player2Joystick;
+
     bool ConteoRedresivo = true;
     public Rect ConteoPosEsc;
     public float ConteoParaInicion = 3;
@@ -79,12 +82,12 @@ public class GameManager : MonoBehaviour
         {
             case EstadoJuego.Calibrando:
 
-                if (Input.GetKeyDown(KeyCode.W))
+                if (player1Joystick.Vertical >0.9f)
                 {
                     Player1.Seleccionado = true;
                 }
 
-                if (Input.GetKeyDown(KeyCode.UpArrow))
+                if (player2Joystick.Vertical > 0.9f)
                 {
                     Player2.Seleccionado = true;
                 }

@@ -77361,6 +77361,8 @@ MonoBehaviour:
   EstAct: 0
   Player1: {fileID: 13058}
   Player2: {fileID: 27660010}
+  player1Joystick: {fileID: 5347541341002542961}
+  player2Joystick: {fileID: 60763192}
   ConteoPosEsc:
     serializedVersion: 2
     x: 0
@@ -84981,6 +84983,11 @@ PrefabInstance:
       propertyPath: InputAct
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 60763192}
     - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: IdPlayer
@@ -85000,7 +85007,7 @@ PrefabInstance:
         type: 3}
       propertyPath: volante
       value: 
-      objectReference: {fileID: 60763194}
+      objectReference: {fileID: 0}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: BonusFill
@@ -85249,6 +85256,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d90d44545d0620248a544f5ccdfb2310,
         type: 3}
+    - target: {fileID: 6326978218417570816, guid: db6086bb6cb40af44868891788f049a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6086bb6cb40af44868891788f049a9, type: 3}
 --- !u!224 &60763190 stripped
@@ -85269,15 +85281,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &60763193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5347541340857940609, guid: db6086bb6cb40af44868891788f049a9,
+--- !u!114 &60763192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6326978218417570828, guid: db6086bb6cb40af44868891788f049a9,
     type: 3}
   m_PrefabInstance: {fileID: 60763189}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &60763194 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5347541339484614839, guid: db6086bb6cb40af44868891788f049a9,
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &60763193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5347541340857940609, guid: db6086bb6cb40af44868891788f049a9,
     type: 3}
   m_PrefabInstance: {fileID: 60763189}
   m_PrefabAsset: {fileID: 0}
@@ -85494,7 +85512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 1
+  joystick: {fileID: 60763192}
   Desde: {fileID: 13040}
   Hasta: {fileID: 13041}
 --- !u!1 &611983551
@@ -85661,6 +85679,11 @@ PrefabInstance:
       propertyPath: InputAct
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 5347541341002542961}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: Dinero
@@ -85680,7 +85703,7 @@ PrefabInstance:
         type: 3}
       propertyPath: volante
       value: 
-      objectReference: {fileID: 1839095751}
+      objectReference: {fileID: 0}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: BonusFill
@@ -85957,7 +85980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 0
+  joystick: {fileID: 5347541341002542961}
   Desde: {fileID: 13044}
   Hasta: {fileID: 13043}
 --- !u!1 &1049659492 stripped
@@ -86190,7 +86213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 0
+  joystick: {fileID: 5347541341002542961}
   Desde: {fileID: 13062}
   Hasta: {fileID: 13063}
 --- !u!1 &1425887806 stripped
@@ -86285,7 +86308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 1
+  joystick: {fileID: 60763192}
   Desde: {fileID: 13017}
   Hasta: {fileID: 13016}
 --- !u!1 &1643806369 stripped
@@ -86293,12 +86316,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5347541339907708172, guid: db6086bb6cb40af44868891788f049a9,
     type: 3}
   m_PrefabInstance: {fileID: 60763189}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1839095751 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5347541339484614839, guid: db6086bb6cb40af44868891788f049a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 5347541341002542960}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855716130 stripped
 GameObject:
@@ -86441,5 +86458,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6326978218417570816, guid: db6086bb6cb40af44868891788f049a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6086bb6cb40af44868891788f049a9, type: 3}
+--- !u!114 &5347541341002542961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6326978218417570828, guid: db6086bb6cb40af44868891788f049a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5347541341002542960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

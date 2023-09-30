@@ -1,0 +1,3 @@
+Singleton: Este es el que mas se utiliza para hacer data persistente entre escenas y esta no es la excepcion y lo utilice para manejar la dificultad, el modo y checkear si se volvio de la escena de gampeplay para triggerear el menu de Creditos como muestra la tarea
+MVC: Use este patron para combinarlo con el manejo de SOs y hacer los menues expandibles tambien use un poco de Facade al hacer la comunicacion entre los hijos
+Factory: MenuCardFactory use este patron por si se quiere expandir a un manejo de cartas en 3D este caso de factory es especifico para UI

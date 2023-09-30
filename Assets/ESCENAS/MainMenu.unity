@@ -1853,12 +1853,13 @@ MonoBehaviour:
   mainCamera: {fileID: 1727260985}
   holder: {fileID: 378163357}
   initialCardsUIPosiution:
-  - {x: -200, y: 100}
-  - {x: -900, y: 100}
-  selectedPosition: {x: -100, y: 604}
+  - {x: -200, y: 500}
+  - {x: -900, y: 500}
+  selectedPosition: {x: -100, y: 741.06}
   dissapearPosition: {x: -100, y: 1500}
-  minYvalue: 0
+  minYvalue: 500
   maxYvalue: 1000
+  dragFactor: 0.079
 --- !u!1 &1727260983
 GameObject:
   m_ObjectHideFlags: 0

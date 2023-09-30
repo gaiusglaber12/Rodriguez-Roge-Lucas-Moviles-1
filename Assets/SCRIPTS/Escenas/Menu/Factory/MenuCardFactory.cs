@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Jobs;
 
 public class CardFactory : MonoBehaviour
 {
@@ -21,17 +19,25 @@ public class MenuCardFactory : CardFactory
     [SerializeField] private ScreenController screenController;
 
     [SerializeField] private Camera mainCamera = null;
+
     [SerializeField] private Transform holder = null;
+
     [SerializeField] private Vector2[] initialCardsUIPosiution = null;
+
     [SerializeField] private Vector2 selectedPosition = Vector2.zero;
     [SerializeField] private Vector2 dissapearPosition = Vector2.zero;
+
     [SerializeField] private float minYvalue = 0.0f;
     [SerializeField] private float maxYvalue = 0.0f;
+
+    [Range(0,1)]
+    [SerializeField] private float dragFactor = 0.0f;
     #endregion
 
     #region PRIVATE_FIELDS
     private MenuCard selectedCard = null;
     private bool selected = false;
+    private Vector3 mousePosition = Vector3.zero;
     #endregion
 
     #region UNITY_CALLS
@@ -122,33 +128,41 @@ public class MenuCardFactory : CardFactory
     {
         if (selectedCard != null && selected)
         {
-            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-            pointerEventData.position = Input.mousePosition;
-
-            List<RaycastResult> racastAllResults = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(pointerEventData, racastAllResults);
-
-            for (int i = 0; i < racastAllResults.Count; i++)
+            if (Input.GetMouseButton(0))
             {
-                MenuCard menuCard = racastAllResults[i].gameObject.GetComponent<MenuCard>();
-                if (menuCard != null && menuCard.id == selectedCard.id)
+                PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+                pointerEventData.position = Input.mousePosition;
+
+                List<RaycastResult> racastAllResults = new List<RaycastResult>();
+                EventSystem.current.RaycastAll(pointerEventData, racastAllResults);
+
+                for (int i = 0; i < racastAllResults.Count; i++)
                 {
-                    if (selectedCard.RectTransform.anchoredPosition.y < maxYvalue)
+                    MenuCard menuCard = racastAllResults[i].gameObject.GetComponent<MenuCard>();
+                    if (menuCard != null && menuCard.id == selectedCard.id)
                     {
-                        selectedCard.SetPosition(new Vector3(selectedPosition.x, pointerEventData.position.y, 0));
-                    }
-                    else
-                    {
-                        selectedCard.SetPosition(dissapearPosition);
+                        if (selectedCard.RectTransform.anchoredPosition.y < maxYvalue)
+                        {
+                            Vector3 newPosition = new Vector3(selectedPosition.x, selectedCard.RectTransform.anchoredPosition.y + Mathf.Abs((Input.mousePosition.y - mousePosition.y)* dragFactor), 0);
+                            selectedCard.SetPosition(newPosition);
+                        }
+                        else
+                        {
+                            selectedCard.SetPosition(dissapearPosition);
 
-                        ScreenModel screenModel = new ScreenModel(selectedCard.MenuConfig);
-                        screenController.Init(screenModel);
-                        screenController.ToggleMenu(true);
+                            ScreenModel screenModel = new ScreenModel(selectedCard.MenuConfig);
+                            screenController.Init(screenModel);
+                            screenController.ToggleMenu(true);
 
-                        selectedCard = null;
-                        selected = false;
+                            selectedCard = null;
+                            selected = false;
+                        }
                     }
                 }
+            }
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0))
+            {
+                mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
             }
         }
     }
