@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         {
             case EstadoJuego.Calibrando:
 
+#if UNITY_ANDROID || UNITY_IOS
                 if (player1Joystick.Vertical >0.9f)
                 {
                     Player1.Seleccionado = true;
@@ -91,6 +92,17 @@ public class GameManager : MonoBehaviour
                 {
                     Player2.Seleccionado = true;
                 }
+#else
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    Player1.Seleccionado = true;
+                }
+
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    Player2.Seleccionado = true;
+                }
+#endif
 
                 break;
 
