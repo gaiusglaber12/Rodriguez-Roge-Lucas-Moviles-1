@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: MobileDevTP1
+  productName: MoneyCollector
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -160,6 +160,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.MobileDevTP1
+    Standalone: com.DefaultCompany.MoneyCollector
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -277,7 +278,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 271d6b02383cdb2428408ccfdfbc5083, type: 3}
+      m_Icon: {fileID: 2800000, guid: ba98a2fdbea90ed43baa866f177e9287, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
