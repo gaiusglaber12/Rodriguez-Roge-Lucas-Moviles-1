@@ -55,6 +55,10 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         GameManager.Instancia = this;
+#if UNITY_ANDROID || UNITY_IOS
+        player1Joystick.gameObject.SetActive(true);
+        player2Joystick.gameObject.SetActive(true);
+#endif
     }
 
     IEnumerator Start()

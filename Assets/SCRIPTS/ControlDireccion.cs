@@ -15,7 +15,7 @@ public class ControlDireccion : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-#if !UNITY_ANDROID || UNITY_IOS
+#if UNITY_ANDROID || UNITY_IOS 
         joystick.gameObject.SetActive(true);
 #else
         joystick.gameObject.SetActive(false);
