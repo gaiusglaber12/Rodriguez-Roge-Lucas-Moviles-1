@@ -15,11 +15,19 @@ public class MenuView : MonoBehaviour
         {
             foreach (var btnConfig in menuConfig.buttonModels)
             {
+#if UNITY_ANDROID
+                if (btnConfig.btnPosition == view.BtnPoisition && !btnConfig.id.Contains("coop"))
+                {
+                    view.Configure(btnConfig, btnConfig.onPressed);
+                    view.ToggleImg(true);
+                }
+#else
                 if (btnConfig.btnPosition == view.BtnPoisition)
                 {
                     view.Configure(btnConfig, btnConfig.onPressed);
                     view.ToggleImg(true);
                 }
+#endif
             }
         }
         if (menuConfig.mainText != string.Empty)

@@ -68,7 +68,7 @@ public class ControlDireccion : MonoBehaviour
                 break;
         }
         carController.SetGiro(Giro);
-        carController.SetAcel(1);
+        carController.SetAcel(2);
 #endif
 
     }
